@@ -1,0 +1,34 @@
+
+.sidebar {  
+    color:#018e6b;
+    font-size: 15px;
+    box-sizing: border-box;
+    //width:150px;
+    flex-direction: column; 
+    text-transform:uppercase ; 
+    table {
+        border-collapse: collapse;
+    }
+ 
+}  
+.links {
+    flex:1;
+    tr {
+        list-style-type: none;
+        padding: 0;
+        td {
+            a {
+                color:#018e6b;;
+                text-decoration: none;
+                &:hover{
+                    color:grey;
+                }
+            }
+        }
+    }
+}
+
+
+.bullet {
+    padding:15px;
+}
