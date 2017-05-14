@@ -3,6 +3,7 @@ import styles from './Home.scss';
 import Sidebar from 'site/Sidebar'
 import Topbar from 'site/Topbar'
 import Body from 'site/Body'
+import Info from 'site/Info'
 
 export default class Home extends React.Component {
 
@@ -17,8 +18,8 @@ export default class Home extends React.Component {
         return (
             <div className={styles.home}>
                 <Topbar/>
-                <div className={styles.content}>
-            
+                <Info/>
+                <div className={styles.content}>     
                     <Body/>
                 </div>
             </div>
