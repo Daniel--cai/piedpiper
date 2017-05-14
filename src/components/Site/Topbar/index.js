@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Topbar.scss'
-var logo = require('images/site/logo.png')
+var logo = require('images/site/piedpiper.png')
 var FontAwesome = require('react-fontawesome');
 
 export default class Sidebar extends React.Component {
@@ -10,7 +10,8 @@ export default class Sidebar extends React.Component {
             <div className={styles.topbar}>
 
                 <div className={styles.header}>
-                    <span className={styles.heading}><FontAwesome name='pied-piper' size='2x'/></span>
+                    <img src={logo} className={styles.logo}/>
+
                       <span><FontAwesome name='upload'/>Upload</span>
                        <span><FontAwesome name='chain'/>Share Link</span>
                        <label className={styles.search}>

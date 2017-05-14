@@ -1,15 +1,15 @@
 
 .info {  
     box-sizing: border-box;
-    padding: 20px;
+    padding-bottom: 50px;
     border-top: solid 1px #d1d1d1;
     border-bottom: solid 1px #d1d1d1;
-    text-align:right;
+    display:inline-block;
+
 } 
 
-.peers, .util, .total {
-    
-    box-sizing: border-box;
+.peers, .util, .total {  
+    float:right;
     padding:10px;
     border: solid 1px #d1d1d1;
     margin: 10px;
@@ -32,4 +32,11 @@
 
 .total{
      background-color:#0f6c4d;
+}
+
+.logo {
+    float:left;
+    width:200px;
+    vertical-align: middle;
+
 }

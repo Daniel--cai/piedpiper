@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Info.scss';
 import FontAwesome from 'react-fontawesome'
+import logo from 'images/site/logogreen.png'
 export default class Info extends React.Component {
 
     constructor(props){
@@ -12,7 +13,10 @@ export default class Info extends React.Component {
     }
     render(){
         return (
+            
             <div className={styles.info}>
+
+                <img src={logo} className={styles.logo} />
                 <span className={styles.peers}>
                     <FontAwesome name="globe"/> Global Peers 2191
                 </span>

@@ -5,15 +5,10 @@
     display:flex;
 }  
 .logo {
-    color:#ffffff;
-    background-color:#018e6b;
     box-sizing: border-box;
     width:150px;
-    img{
-        width:50%;
-        padding: 5%;
-
-    }
+    margin:5px;
+    float:left;
 }
 
 .heading {
