@@ -1,6 +1,10 @@
 # piedpiper
-Silicon Valley Pied Piper webapp... design and clickable elements only.. because why not
+Silicon Valley's Pied Piper web app... design and clickable elements only.. because why not
 
+## Installation
+```
 npm install
-npm run
+npm start
 http://localhost:3000
+```
+
