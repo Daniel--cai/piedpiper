@@ -1,0 +1,69 @@
+.modal {
+    background-color:green;
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modalContent{
+    font-size: 13px;
+    background-color: #fefefe;
+    margin: 0 auto; /* 15% from the top and centered */
+    //padding: 20px;
+    //border: 1px solid #888;
+    width: 800px; /* Could be more or less, depending on screen size */
+    table {
+        border-collapse: collapse;
+        margin: 10px;
+    }
+    table, tr,td {
+        //border: solid 1px black;
+    }
+    tr {
+        background-color:#ecfbf8;
+        border-bottom: solid 10px white;
+    }
+    tr:first-child {
+        background-color:white;
+    }
+    
+
+    td {
+        width:30%;
+    }
+
+    h3 {
+        color:#057956;
+        background-color: #ecfbf8;
+    }
+
+    select {
+        background: #cceae2;
+        border: none;
+        border-radius: 2px;
+        width:100%;
+    }
+
+    input[type=radio]{
+    background-color: white;
+    background-image: -webkit-linear-;
+        box-shadow:none;
+        & :checked {
+            color: green;
+        }
+    }
+    button {
+        background-color: #007d5d;
+        border-radius: 3px;
+        border: solid 1px #0b6049; 
+        color:white;
+        padding:5px 10px;
+        &:focus{
+            outline:0;
+        }
+    }
+}
