@@ -5,6 +5,7 @@ var FontAwesome = require('react-fontawesome');
 
 export default class Sidebar extends React.Component {
     render(){
+        var { onClick, spin } = this.props;
         return(
             <div className={styles.sidebar}>
                
@@ -20,8 +21,8 @@ export default class Sidebar extends React.Component {
                         <td><a href="#">Starred</a></td>
                         </tr>
                     <tr>
-                        <td><FontAwesome name='file'className={styles.bullet}/></td>
-                        <td><a href="#">Files</a></td>
+                        <td><FontAwesome spin={spin} name={spin ? 'spinner' : 'file'}  className={styles.bullet}/></td>
+                        <td><a onClick={()=>onClick()}> Files</a></td>
                         </tr>
                     <tr>
                         <td><FontAwesome name='camera'className={styles.bullet}/></td>

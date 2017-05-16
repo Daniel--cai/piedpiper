@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Body.scss';
-import Sidebar from 'site/Sidebar'
+import SidebarLink from 'containers/SidebarLink'
 import Fileviewer from 'site/Fileviewer'
 export default class Body extends React.Component {
 
@@ -14,7 +14,7 @@ export default class Body extends React.Component {
     render(){
         return (
             <div className={styles.body}>
-                <Sidebar/>
+                <SidebarLink/>
                 <Fileviewer/>
             </div>
 

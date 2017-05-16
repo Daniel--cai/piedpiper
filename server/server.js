@@ -17,6 +17,12 @@ app.use(webpackDevMiddleware(compiler, {
 }))
 app.use(webpackHotMiddleware(compiler))
 
+app.get('/data', (req,res)=>{
+    res.setHeader('Content-Type', 'application/json');
+    var body = {msg: "Access denied"}
+    res.send(400, body)
+});
+
 const connections = [];
 const games = [];
 let cardIdCounter = 0;

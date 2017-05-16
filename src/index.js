@@ -9,6 +9,7 @@ import thunk  from 'redux-thunk'
 import reducer from 'reducers'
 
 import { Provider } from 'react-redux'
+import promiseMiddleware from 'redux-promise-middleware';
 
 const io = require('socket.io-client') 
 const socket = io();
@@ -21,7 +22,7 @@ const composeEnhancers =
       shouldHotReload: true,
     }) : compose;
 
-const middleware = [thunk]
+const middleware = [thunk,promiseMiddleware()]
 const enhancer  = composeEnhancers(applyMiddleware(...middleware))
 const store = createStore(reducer,enhancer);
 
