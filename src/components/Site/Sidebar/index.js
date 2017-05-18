@@ -11,6 +11,7 @@ export default class Sidebar extends React.Component {
                
                 <div className={styles.links}> 
                 <table>
+                    <tbody>
                     <tr><td colSpan={2}>MY PIED PIPER</td></tr>
                     <tr>
                         <td><FontAwesome name='folder-open-o'className={styles.bullet}/></td>
@@ -22,12 +23,13 @@ export default class Sidebar extends React.Component {
                         </tr>
                     <tr>
                         <td><FontAwesome spin={spin} name={spin ? 'spinner' : 'file'}  className={styles.bullet}/></td>
-                        <td><a onClick={()=>onClick()}> Files</a></td>
+                        <td><a href='#a' onClick={()=>onClick()}> Files</a></td>
                         </tr>
                     <tr>
                         <td><FontAwesome name='camera'className={styles.bullet}/></td>
                         <td><a href="#">Photos</a></td>
-                        </tr>                      
+                        </tr>    
+                    </tbody>                  
                  </table>
                 </div>
             </div>

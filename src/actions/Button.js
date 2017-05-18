@@ -7,7 +7,6 @@ import axios from 'axios';
 
 function callFetch(){
     var res = axios.get('http://localhost:3000/data')
-    console.log(res)
     return res;
 }
 
@@ -27,9 +26,8 @@ function errorSomething(error){
 
 function doSomething(data){
     try{
-      
+    console.log(data)
     var string = JSON.stringify(data)
-      console.log(string)
     } catch (ex){
         console.log(ex);
     }
@@ -51,13 +49,12 @@ export function fetchContent(){
         dispatch(spinning(true))     
         return callFetch()
             .then(response => {
-                console.log(response)
                 return response.data
             })
             .then(success => {
-                dispatch(doSomething(success))
-                dispatch(spinning(false))
+                dispatch(doSomething(success))        
             })
             .catch(error => dispatch(errorSomething(error.response)))
+            .then(()=>dispatch(spinning(false)))
     }
 }
