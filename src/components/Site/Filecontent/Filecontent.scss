@@ -1,0 +1,55 @@
+.filecontent {
+  font-family: 'Lucida Sans';
+  flex:1;
+  box-sizing: border-box;
+
+  color:black;
+
+  tr:nth-child(odd) {
+    background: white;
+  }
+  tr:nth-child(even) {
+    background:#f5f5f5
+  }
+  td:first-child,td:last-child,th {
+    color:#1D96B7;
+  }
+  tr {
+    border-top:  solid 1px #1D96B7;
+    border-bottom:  solid 1px #1D96B7;
+    &:hover{
+      background-color: rgba(0, 0, 0, .1);
+
+    }
+
+  } 
+  tr:first-child {
+    border-top: none;
+    border-bottom: none;
+      text-transform: uppercase;
+          &:hover{
+      background:none;;
+    }
+  }
+  td {
+        padding:10px;
+  }
+  table {
+    border-collapse: collapse;
+    //min-width:700px;
+  }
+
+}
+
+.form{
+
+  tr, td{
+   border-collapse: collapse;
+    border: solid 1px black;
+  }
+  table{
+    border-collapse: collapse;
+  }
+
+
+}

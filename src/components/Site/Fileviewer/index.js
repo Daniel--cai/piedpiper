@@ -7,7 +7,7 @@ import Tab from 'site/Tab'
 import Pane from 'site/Pane'
 var FontAwesome = require('react-fontawesome');
 
-export default class Fileviewer extends React.Component {
+export default class FileContent extends React.Component {
 
     constructor(props){
         super(props);
@@ -18,74 +18,43 @@ export default class Fileviewer extends React.Component {
     }
     render(){
         return (
-            <div className="Tabbed">
-            <Tab>
-                <Pane label="Title">                  
-                    <div className={styles.form}>
-                        <p>
-                        	<b>Enter Title Reference (eg 1863/10000001)</b>
-                            <table >
-                                <tbody>
-                                <tr>
-									<td>Matter</td>
-									<td>Title Reference</td>
-									<td>CP</td>
-									<td>Proprietor</td>
-									<td>Address</td>
-									<td>Parish</td>
-									<td>County</td>
-									<td>LGA</td>
-									<td>Fee</td>
-                                </tr>
-								<tr>
-									<td>
-										<input type="text"></input>
-									</td>
-									<td><input type="text"></input>
-									</td>
-								</tr>
-                                </tbody>
-                            </table>
-							<button>Bulk</button>
-							<button>Verify</button>
-							<button>Order</button>
-                        </p>
-                    </div>
-                </Pane>
-                <Pane label="Street Address">
-                    <div>This is my tab 2 contents!</div>
-                </Pane>
-                <Pane label="Owner Name">
-                    <div>This is my tab 3 contents!</div>
-                </Pane>
-                <Pane label="Sub Folio">
-                    <div>This is my tab 1 contents!</div>
-                </Pane>
-                <Pane label="Historical">
-                    <div>This is my tab 2 contents!</div>
-                </Pane>
-                <Pane label="CT Enquiry">
-                    <div>This is my tab 3 contents!</div>
-                </Pane>                
-                <Pane label="Lots Created">
-                    <div>This is my tab 1 contents!</div>
-                </Pane>
-                <Pane label="Prior Title">
-                    <div>This is my tab 2 contents!</div>
-                </Pane>
-                <Pane label="CAC">
-                    <div>This is my tab 3 contents!</div>
-                </Pane>                
-                <Pane label="Reverse Street Address">
-                    <div>This is my tab 1 contents!</div>
-                </Pane>
-                <Pane label="Reverse Proprietor">
-                    <div>This is my tab 2 contents!</div>
-                </Pane>
-                <Pane label="Cancelled Title">
-                    <div>This is my tab 3 contents!</div>
-                </Pane>     
-            </Tab>
+            <div className={styles.fileviewer}>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Matter</th>
+                            <th>Service</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>User</th>
+                            <th>Amount</th>
+                            <th>Details</th>
+                        </tr> 
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>pop</td>
+                            <td>Copy</td>
+                            <td>Copy of abc</td>
+                            <td><span className={styles.complete}>Complete</span></td>
+                            <td>11:53PM</td>
+                            <td>Lorem</td>
+                            <td>$10.00</td>
+                            <td>Details</td>
+                        </tr> 
+                        <tr>
+                            <td>pop</td>
+                            <td>Copy</td>
+                            <td>Copy of abc Copy of abc Copy of abc Copy of abc</td>
+                            <td><span className={styles.error}>Error</span></td>
+                            <td>11:53PM</td>
+                            <td>Lorem</td>
+                            <td>$10.00</td>
+                            <td>Details</td>
+                        </tr> 
+                    </tbody>
+                </table>
             </div>
 
         )

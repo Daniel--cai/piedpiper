@@ -1,6 +1,6 @@
 
 .topbar {  
-    min-width: 1000px;
+    //min-width: 1000px;
     box-sizing: border-box;
 
 }  
@@ -17,7 +17,6 @@
     float: left;
     margin:-15px;
    
-
     //font-size: 20px;
 }
 
@@ -33,16 +32,15 @@
         position: absolute;
         left:105px;
         top:0px;
-
     }
 }
 //https://coolors.co/1d96b7-fbb169-393e41-d3d0cb-e7e5df
 .header {
     background-color:#1D96B7;
     color: white;
-    text-align: right;
+    //text-align: right;
     padding: 10px;
-         height: 75px;
+    height: 40px;
     span {
         padding: 10px;
     }    

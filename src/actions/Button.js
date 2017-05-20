@@ -6,8 +6,8 @@ import thunk from 'redux-thunk';
 import axios from 'axios';
 
 function callFetch(){
-    //var res = axios.get('http://localhost:3000/data')
-    var res = axios.get("https://api.spotify.com/v1/artists/43ZHCT0cAZBISjO8DG9PnE/top-tracks?country=SE")
+    var res = axios.get('http://localhost:3000/image')
+
     return res;
 }
 

@@ -11,9 +11,10 @@ export default class Sidebar extends React.Component {
 
                 <div className={styles.header}>
                     <img src={logo} className={styles.logo}/>
-
-                      <span><FontAwesome name='upload'/>Upload</span>
-                       <span><FontAwesome name='chain'/>Share Link</span>
+                    <span><FontAwesome name='upload'/>Home</span>
+                      <span><FontAwesome name='upload'/>Searches</span>
+                       <span><FontAwesome name='chain'/>Orders</span>
+                         <span><FontAwesome name='chain'/>Reports</span>
                        <label className={styles.search}>
                         <span><FontAwesome name='search'/></span>
                         <input  placeholder="Search" type="text"></input>         
