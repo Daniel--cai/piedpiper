@@ -1,9 +1,7 @@
 .home {
   font-family: 'Lucida Sans';
-  display:flex;
-  flex-direction: column;
+
   box-sizing: border-box;
-  flex:1;
   height: 100%;
 }
 
@@ -16,14 +14,13 @@ body {
   margin:0;
   min-height: 100%;
   padding:0;
-  display:flex;
-  flex-direction: row;
   font-family: 'Lucida Sans';
-  
+}
+ul {
+  margin: 0;
+  padding: 0;
 }
 
+
 .content {
-  display:flex;
-  flex:1;
-  flex-direction: row;
 }

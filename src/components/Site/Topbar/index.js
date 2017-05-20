@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Topbar.scss'
-var logo = require('images/site/piedpiper.png')
+var logo = require('images/site/white-logo.png')
 var FontAwesome = require('react-fontawesome');
 
 export default class Sidebar extends React.Component {

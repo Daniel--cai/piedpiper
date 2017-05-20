@@ -1,19 +1,23 @@
 
 .topbar {  
-
+    min-width: 1000px;
     box-sizing: border-box;
-    display:flex;
+
 }  
 .logo {
     box-sizing: border-box;
-    width:150px;
-    margin:5px;
+    width:auto;
+    height:100%;
+    margin: 0px 00px 00px 10px;
     float:left;
+    vertical-align: middle;
 }
 
 .heading {
     float: left;
     margin:-15px;
+   
+
     //font-size: 20px;
 }
 
@@ -32,13 +36,13 @@
 
     }
 }
-
+//https://coolors.co/1d96b7-fbb169-393e41-d3d0cb-e7e5df
 .header {
-    background-color:#018e6b;
+    background-color:#1D96B7;
     color: white;
-    flex:1;
     text-align: right;
     padding: 10px;
+         height: 75px;
     span {
         padding: 10px;
     }    
@@ -47,5 +51,10 @@
         font:inherit;
         font-size:inherit;
         color: grey;
+        border-radius: 5px;
+
+    }
+    input{
+        border: solid 2px #393E41;
     }
 }

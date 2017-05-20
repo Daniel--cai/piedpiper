@@ -1,29 +1,19 @@
 
 .sidebar {  
-    color:#018e6b;
+    color:#E7E5DF;
     font-size: 15px;
-    box-sizing: border-box;
-    //width:150px;
-    flex-direction: column; 
-    text-transform:uppercase ; 
-    table {
-        border-collapse: collapse;
-    }
+    width:70px;
+
+    background-color:#393E41;
  
 }  
 .links {
-    flex:1;
-    tr {
-        list-style-type: none;
-        padding: 0;
-        td {
-            a {
-                color:#018e6b;;
-                text-decoration: none;
-                &:hover{
-                    color:grey;
-                }
-            }
+
+    a {
+        color:#E7E5DF;
+        text-decoration: none;
+        &:hover{
+            color:grey;
         }
     }
 }

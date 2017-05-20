@@ -21,9 +21,8 @@ export default class Home extends React.Component {
             <div className={styles.home}>
                 <Topbar/>
                 
-                <Info/>
+    
                 <div className={styles.content}>     
-                    
                     <Body/>
                 </div>
             </div>
