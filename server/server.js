@@ -3,7 +3,7 @@ var webpackDevMiddleware = require("webpack-dev-middleware");
 var webpackHotMiddleware = require('webpack-hot-middleware')
 var webpack = require("webpack");
 var webpackConfig = require("../webpack.config");
-
+var bodyParser = require('body-parser')
 var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
@@ -26,6 +26,8 @@ app.use(webpackDevMiddleware(compiler, {
 }))
 app.use(webpackHotMiddleware(compiler))
 
+app.use(bodyParser.urlencoded({ extended:false}))
+app.use(bodyParser.json())
 
 app.get('/image', (req,res)=>{
     var region = "na"
@@ -49,7 +51,7 @@ app.get('/match', (req,res)=>{
     var summonerName = "asdf"
     var summonerId; 
     var region ="na"
-        res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Content-Type', 'application/json');
     ApiClient.get(`na/v1.4/summoner/by-name/${summonerName}`)
         .then(response=>{
             var summonerId = response.data[summonerName].id
@@ -84,6 +86,20 @@ app.get('/user', (req,res)=>{
             console.log(error)
             res.status(400).send(error.data)
         })
+})
+
+app.post('/Property/Title', (req,res)=>{
+    res.setHeader('Content-Type', 'application/json'); 
+    console.log(req.body)
+    body = {
+        cp: 'no',
+        proprietor: 'Bob Steven Jones',
+        address: '15 Derp St Appletown NSW 2000',
+        parish: 'St George',
+        county: 'Cumberland',
+        fee: 10.79
+    }
+    res.status(200).send(body)
 })
 
 app.get('/data', (req,res)=>{

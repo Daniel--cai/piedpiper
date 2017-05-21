@@ -20,8 +20,13 @@ function state(state=initialState,action){
     return state;
 }
 
+function modal(state = false,action){
+    return state;
+}
+
 const App = combineReducers({
-    state
+    state,
+    modal
 })
 
 export default App

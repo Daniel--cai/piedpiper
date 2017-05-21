@@ -2,7 +2,9 @@
   font-family: 'Lucida Sans';
 
   box-sizing: border-box;
-  height: 100%;
+  min-height:100%;
+  display:flex;
+  flex-direction: row;
 }
 
 
@@ -12,16 +14,48 @@ html {
 
 body {
   margin:0;
-  min-height: 100%;
+  height: 100%;
   padding:0;
   font-family: 'Lucida Sans';
-  background-color:#e5e8eb;
+  background-color:#edf4f7;
+  display:flex;
+    box-sizing: border-box;
+  //flex-direction: column;
+  div#root{
+    padding:10px;
+  }
 }
 ul {
   margin: 0;
   padding: 0;
 }
 
+input{
+    color:inherit;
+    font:inherit;
+    font-size:inherit;
+    font-weight: bold;
+    color: black;
+    border-radius: 5px;
+    border: solid 1px #eaecf0;
+    border: solid 1px white;;
+    padding: 10px;
+    padding-left:0;
+  
+    & :focus{
+        outline: none;
+    }    
+}
 
-.content {
+input::placeholder {
+    color: #eaecf0;
+}
+button {
+    padding: 10px;
+    background-color: #1d96b7;
+    color:white;
+    font-weight: bold;
+  font-size: 12px;
+    border-radius: 5px;
+    border:  solid 1px #eaecf0;
 }

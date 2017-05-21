@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Topbar.scss'
+import Menu from 'site/Menu'
 var logo = require('images/site/white-logo.png')
 var FontAwesome = require('react-fontawesome');
 
@@ -10,16 +11,15 @@ export default class Sidebar extends React.Component {
             <div className={styles.topbar}>
 
                 <div className={styles.header}>
-                    <img src={logo} className={styles.logo}/>
-                    <span><FontAwesome name='upload'/>Home</span>
-                      <span><FontAwesome name='upload'/>Searches</span>
-                       <span><FontAwesome name='chain'/>Orders</span>
-                         <span><FontAwesome name='chain'/>Reports</span>
+                       <span><FontAwesome name='search'/></span>
                        <label className={styles.search}>
-                        <span><FontAwesome name='search'/></span>
-                        <input  placeholder="Search" type="text"></input>         
+                        <input  placeholder="Search file name" type="text"></input>         
                        </label>   
+                       <a href="#"><FontAwesome name="cog" size="2x" className={styles.setting}/></a>
+                       <a href="#"><FontAwesome name="bell" size="2x" className={styles.setting}/></a>
+                        <a href="#"><FontAwesome name="phone" size="2x" className={styles.setting}/></a>
                 </div>
+           
               
             </div>
         )

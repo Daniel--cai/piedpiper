@@ -3,56 +3,39 @@
     //min-width: 1000px;
     box-sizing: border-box;
 
+    
 }  
-.logo {
-    box-sizing: border-box;
-    width:auto;
-    height:100%;
-    margin: 0px 00px 00px 10px;
-    float:left;
-    vertical-align: middle;
-}
+
 
 .heading {
     float: left;
     margin:-15px;
-   
-    //font-size: 20px;
 }
 
 
 .search {
     padding: 10px;
     position: relative;
-    input{
-        padding: 10px;
-    }
-    span {
-        color:grey;
-        position: absolute;
-        left:105px;
-        top:0px;
-    }
+
 }
 //https://coolors.co/1d96b7-fbb169-393e41-d3d0cb-e7e5df
 .header {
-    background-color:#1D96B7;
-    color: white;
+  
+    background-color:#ffffff;
+    color:#a5b0c2;
     //text-align: right;
     padding: 10px;
     height: 40px;
     span {
-        padding: 10px;
+        //padding: 10px;
+        color: #eaecf0;
     }    
-    input,input::placeholder {
-        color:inherit;
-        font:inherit;
-        font-size:inherit;
-        color: grey;
-        border-radius: 5px;
 
-    }
-    input{
-        border: solid 2px #393E41;
-    }
+
+}
+.setting{
+    float:right;
+    line-height: 40px;
+    margin: 0 10px;
+    //outline: solid 1px black;
 }

@@ -20,18 +20,6 @@ export default class FileContent extends React.Component {
         return (
             <div className={styles.fileviewer}>
                 <table>
-                    <thead>
-                        <tr>
-                            <th>Matter</th>
-                            <th>Service</th>
-                            <th>Description</th>
-                            <th>Status</th>
-                            <th>Date</th>
-                            <th>User</th>
-                            <th>Amount</th>
-                            <th>Details</th>
-                        </tr> 
-                    </thead>
                     <tbody>
                         <tr>
                             <td>pop</td>
@@ -41,7 +29,7 @@ export default class FileContent extends React.Component {
                             <td>11:53PM</td>
                             <td>Lorem</td>
                             <td>$10.00</td>
-                            <td>Details</td>
+                            <td><a href='#'><FontAwesome name="ellipsis-h" size="2x"/></a></td>
                         </tr> 
                         <tr>
                             <td>pop</td>
