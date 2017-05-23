@@ -2,6 +2,7 @@ export const FETCH_CONTENT = "FETCH_CONTENT";
 export const DO_SOMETHING = "DO_SOMETHING";
 export const ERROR_SOMETHING = "ERROR_SOMETHING"
 export const SPINNING = "SPINNER"
+export const ADD_ROW = "ADD_ROW"
 import thunk from 'redux-thunk';
 import axios from 'axios';
 
@@ -35,6 +36,12 @@ function doSomething(data){
  
     return {
         type: DO_SOMETHING,
+    }
+}
+
+export function addRow(){
+    return {
+        type: ADD_ROW
     }
 }
 

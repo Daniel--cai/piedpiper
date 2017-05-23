@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { SPINNING } from 'actions/Button'
+import { SPINNING, ADD_ROW } from 'actions/Button'
 
 var initialState = false
 
@@ -24,9 +24,18 @@ function modal(state = false,action){
     return state;
 }
 
+function titleList(state = [{file:'', title:''}], action){
+    switch(action.type){
+        case ADD_ROW:
+            return [...state, {file:'', title:''}]
+    }
+    return state;
+}
+
 const App = combineReducers({
     state,
-    modal
+    modal,
+    titleList,
 })
 
 export default App

@@ -32,7 +32,6 @@ export default class FileContent extends React.Component {
             })
     
     }
-
     render(){
         console.log(this.props)
         return (
