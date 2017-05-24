@@ -1,21 +1,21 @@
 import { connect } from 'react-redux'
-import Body from 'site/Body'
+import Filecontent from 'site/Filecontent'
 import { addRow } from 'actions/Button.js'
 
 const mapStateToProps = (state, ownProps) =>{
     return{
-        showModal:state.modal
+        titleList:state.titleList
     }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        addRow: dispatch(addRow())
+        addRow: ()=>dispatch(addRow())
     }
 }
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Body)
+)(Filecontent)
 

@@ -9,6 +9,15 @@ import axios from 'axios'
 var FontAwesome = require('react-fontawesome');
 
 export default class FileContent extends React.Component {
+/*
+        titleList:state.titleList
+    }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        addRow: dispatch(addRow())
+ */
 
     constructor(props){
         super(props);
@@ -32,8 +41,41 @@ export default class FileContent extends React.Component {
             })
     
     }
+    
+    handleClickAddRow(event){
+        event.preventDefault();
+        this.props.addRow()
+    }
+
+    titleRow(props){
+        return(<tr key={props.toString()}>
+                <td></td>
+                <td>
+                    <input type="text" placeholder="Enter file name"></input>
+                </td>
+                <td><input type="text" placeholder="1863/10000001"></input>
+                </td>
+                <td>No</td>
+                <td>KAMIL TONI JANJ</td>
+                <td>15 DERP ST APPLETOWN NSW 2000</td>
+                <td>ST GEORGE</td>
+                <td>CUMBERLAND</td>
+                <td>$10.00</td>
+            </tr>)
+    }
+
+
+    titleList(props){
+        const listItems = this.props.titleList.map((data,index) =>
+            this.titleRow(index)           
+        )
+
+        return listItems
+    }
+
     render(){
-        console.log(this.props)
+
+        var { addRow, titleList} = this.props;
         return (
             <div className="Tabbed">
             <Tab>
@@ -53,23 +95,10 @@ export default class FileContent extends React.Component {
 									<th>County</th>
 									<th>Fee</th>
                                 </tr>
-								<tr>
-                                    <td></td>
-									<td>
-										<input type="text" placeholder="Enter file name"></input>
-									</td>
-									<td><input type="text" placeholder="1863/10000001"></input>
-									</td>
-                                    <td>No</td>
-                                    <td>KAMIL TONI JANJ</td>
-                                    <td>15 DERP ST APPLETOWN NSW 2000</td>
-                                    <td>ST GEORGE</td>
-                                    <td>CUMBERLAND</td>
-                                    <td>$10.00</td>
-								</tr>
+								{this.titleList()}
                                 <tr>
                                     <td>
-                                        <a href="#"><FontAwesome name="plus-square-o" size="2x" className={styles.add}/></a>
+                                        <a href="#" onClick={this.handleClickAddRow.bind(this)}><FontAwesome name="plus-square-o" size="2x" className={styles.add}/></a>
                                     </td>
                                 </tr>
                                 </tbody>

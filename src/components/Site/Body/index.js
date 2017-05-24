@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Body.scss';
 import SidebarLink from 'containers/SidebarLink'
-import Filecontent from 'site/Filecontent'
+import FilecontentLink from 'containers/FilecontentLink'
 import Fileviewer from 'site/Fileviewer'
 import Modal from 'site/Modal'
 import Topbar from 'site/Topbar'
@@ -21,7 +21,7 @@ export default class Body extends React.Component {
                 {showModal ? <Modal/> : ''}
                 <Topbar/>
                 <Fileviewer/>
-                <Filecontent/>
+                <FilecontentLink/>
             </div>
 
         )

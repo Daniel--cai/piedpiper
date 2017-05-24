@@ -21,13 +21,11 @@ export default class Tab extends React.Component {
         function labels(child, index){
             let active = (this.state.selected === index ? styles.active:'')
             return (
-                <a href='#'
-                                   onClick={this.handleClick.bind(this,index)}>                    
+                <a key={index} href='#'
+                    onClick={this.handleClick.bind(this,index)}>                    
                         
-                <li key={index}  className={active}>
-                    {child.props.label}
-  
-                   
+                <li className={active}>
+                    {child.props.label}                   
                 </li>
                  </a>
             );
