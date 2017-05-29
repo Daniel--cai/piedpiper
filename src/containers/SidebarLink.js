@@ -7,12 +7,10 @@ const mapStateToProps = (state, ownProps) =>{
         spin:state.state
     }
 }
-
+//http://bootstraplovers.com/templates/float-admin-v1.1/light-version/index.html
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        onClick: () => {
-            dispatch(fetchContent());
-        }
+        //onClick: () => dispatch(fetchContent())
     }
 }
 
