@@ -34,6 +34,7 @@
     "axios": "^0.16.1",
     "body-parser": "^1.17.2",
     "classnames": "^2.2.5",
+    "d3": "^4.9.1",
     "mongoose": "^4.9.9",
     "react": "^15.5.4",
     "react-fontawesome": "^1.6.1",

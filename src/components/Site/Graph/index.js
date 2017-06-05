@@ -1,54 +1,46 @@
 import React from 'react';
 import styles from './Graph.scss';
-import d3 from 'd3'
+import * as d3 from 'd3'
 var FontAwesome = require('react-fontawesome');
+
 export default class Graph extends React.Component {
-   
-   //http://cmichel.io/how-to-use-d3js-in-react/
-   constructor(props){
-      super(props)
-      this.createBarChart = this.createBarChart.bind(this)
-   }
-   componentDidMount() {
-      this.createBarChart()
-   }
-   componentDidUpdate() {
-      this.createBarChart()
-   }
 
-   createBarChart() {
-      const node = this.node
-      const dataMax = max(this.props.data)
-      const yScale = scaleLinear()
-         .domain([0, dataMax])
-         .range([0, this.props.size[1]])
-   select(node)
-      .selectAll('rect')
-      .data(this.props.data)
-      .enter()
-      .append('rect')
-   
-   select(node)
-      .selectAll('rect')
-      .data(this.props.data)
-      .exit()
-      .remove()
-   
-   select(node)
-      .selectAll('rect')
-      .data(this.props.data)
-      .style('fill', '#fe9922')
-      .attr('x', (d,i) => i * 25)
-      .attr('y', d => this.props.size[1] — yScale(d))
-      .attr('height', d => yScale(d))
-      .attr('width', 25)
-   }
+  constructor(props){
+    super(props)
+    this.tau = Math.PI * 2;
+  }
 
-    render(){
-        var { onClick, spin } = this.props;
-      return <svg ref={node => this.node = node}
-      width={500} height={500}>
-      </svg>
-    };
+  componentDidMount() {
+    const context = this.setContext();
+    this.setBackground(context);
+  }
+  setBackground(context){
+    return context.append('path')
+      .datum({ endAngle: this.tau})
+      .style('fill', '#e6e6e6')
+      .attr('d', this.arc());
+  }
+
+  arc() {
+    return d3.arc()
+      .innerRadius(100)
+      .outerRadius(110)
+      .startAngle(0);
+  }
+
+  setContext() {
+    return d3.select(this.refs.arc).append('svg')
+      .attr('height', '300px')
+      .attr('width', '300px')
+      .attr('id', 'd3-arc')
+      .append('g')
+      .attr('transform', `translate(150, 150)`)
+  }
+  render() {
+    return (
+      <div ref="arc"></div>
+    )
+  }
 }
+
 
