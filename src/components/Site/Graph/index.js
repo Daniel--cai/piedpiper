@@ -13,12 +13,20 @@ export default class Graph extends React.Component {
   componentDidMount() {
     const context = this.setContext();
     this.setBackground(context);
+    this.setForeground(context);
   }
   setBackground(context){
     return context.append('path')
       .datum({ endAngle: this.tau})
       .style('fill', '#e6e6e6')
       .attr('d', this.arc());
+  }
+
+  setForeground(context){
+    return context.append('path')
+        .datum({endAngle: this.tau*0.3})
+        .style('fill', "#00ff00")
+        .attr('d', this.arc())
   }
 
   arc() {
