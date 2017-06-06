@@ -18,21 +18,21 @@ export default class Graph extends React.Component {
   setBackground(context){
     return context.append('path')
       .datum({ endAngle: this.tau})
-      .style('fill', '#e6e6e6')
+      .style('fill', '#dce6ec')
       .attr('d', this.arc());
   }
 
   setForeground(context){
     return context.append('path')
         .datum({endAngle: this.tau*0.3})
-        .style('fill', "#00ff00")
+        .style('fill', "#4dbec4")
         .attr('d', this.arc())
   }
 
   arc() {
     return d3.arc()
-      .innerRadius(100)
-      .outerRadius(110)
+      .innerRadius(70)
+      .outerRadius(80)
       .startAngle(0);
   }
 
