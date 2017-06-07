@@ -5,7 +5,7 @@ import FilecontentLink from 'containers/FilecontentLink'
 import Fileviewer from 'site/Fileviewer'
 import Modal from 'site/Modal'
 import Topbar from 'site/Topbar'
-import Graph from 'site/Graph'
+import GraphLink from 'containers/GraphLink'
 export default class Body extends React.Component {
 
     constructor(props){
@@ -15,18 +15,17 @@ export default class Body extends React.Component {
     componentDidMount() {
       
     }
-    /*
-                    {showModal ? <Modal/> : ''}
-                <Topbar/>
-                <Fileviewer/>
-                <FilecontentLink/>*/
     render(){
         var showModal = this.props.showModal;
         return (
             <div className={styles.body}>
-            
-
-                <Graph/>
+                {showModal ? <Modal/> : ''}
+                <Topbar/>
+                <Fileviewer/>
+                    
+                <FilecontentLink/>
+                <GraphLink/>
+           
             </div>
 
         )

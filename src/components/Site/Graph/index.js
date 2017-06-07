@@ -9,12 +9,14 @@ export default class Graph extends React.Component {
     super(props)
     this.tau = Math.PI * 2;
   }
-
   componentDidMount() {
-    const context = this.setContext();
-    this.setBackground(context);
-    this.setForeground(context);
+    this.drawArc()
   }
+
+  componentDidUpdate(){
+    this.redrawArc();
+  }
+
   setBackground(context){
     return context.append('path')
       .datum({ endAngle: this.tau})
@@ -22,17 +24,49 @@ export default class Graph extends React.Component {
       .attr('d', this.arc());
   }
 
+  drawArc(){
+    const context = this.setContext();
+    this.setBackground(context);
+    this.setForeground(context);
+    this.updatePercent(context);
+  }
+
+  redrawArc(){
+    const context = d3.select(`#${this.props.id}`)
+    context.remove();
+    this.drawArc();
+  }
+
   setForeground(context){
+    var { foregroundColor } = this.props
     return context.append('path')
-        .datum({endAngle: this.tau*0.3})
-        .style('fill', "#4dbec4")
+        .datum({endAngle: 0})
+        .style('fill', foregroundColor)
         .attr('d', this.arc())
+  }
+
+  updatePercent(context){
+    return this.setForeground(context).transition()
+      .duration(this.props.duration)
+      .call(this.arcTween, this.tau * this.props.percentComplete, this.arc())
+  }
+
+  arcTween(transition, newAngle, arc){
+    transition.attrTween('d', d =>{
+      const interpolate = d3.interpolate(d.endAngle, newAngle);
+      const newArc =d ;
+      return t => {
+        newArc.endAngle = interpolate(t);
+        return arc(newArc);
+      }
+    })
   }
 
   arc() {
     return d3.arc()
       .innerRadius(70)
       .outerRadius(80)
+      .cornerRadius(5)
       .startAngle(0);
   }
 

@@ -81,7 +81,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
             <Tab>
                 <Pane label="Title">                  
                     <div className={styles.form}>
-                        <p>
+                        
                             <table >
                                 <tbody>
                                 <tr>
@@ -106,7 +106,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 							<button >Bulk</button>
 							<button onClick={this.handleClick.bind(this)}>Verify</button>
 							<button>Order</button>
-                        </p>
+                    
                     </div>
                 </Pane>
                 <Pane label="Street Address">
