@@ -91,7 +91,7 @@ app.get('/user', (req,res)=>{
 app.post('/Property/Title', (req,res)=>{
     res.setHeader('Content-Type', 'application/json'); 
     console.log(req.body)
-    body = {
+    var body = {
         cp: 'no',
         proprietor: 'Bob Steven Jones',
         address: '15 Derp St Appletown NSW 2000',

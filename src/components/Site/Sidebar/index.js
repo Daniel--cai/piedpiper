@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './Sidebar.scss'
-import logo from 'images/site/white-logo.png'
+//import logo from 'images/site/white-logo.png'
 
 var FontAwesome = require('react-fontawesome');
 //https://s-media-cache-ak0.pinimg.com/originals/d2/8f/19/d28f19b998d42084ea56a56a46abf722.png
 export default class Sidebar extends React.Component {
     render(){
         var { onClick, spin } = this.props;
+                 // <img src={logo} className={styles.logo}/>
         return(
             <div className={styles.sidebar}>
-                  <img src={logo} className={styles.logo}/>
                   <div className={styles.circle}>
                     <FontAwesome name="user-circle-o" size="4x"/>
                     <p className={styles.user}><a href="#">Daniel</a></p>

@@ -7,6 +7,7 @@ export default class Tab extends React.Component {
     constructor(props){
         super(props);
         this.state = { selected: 0 }
+        this.handleClick = this.handleClick.bind(this)
     }
 
     handleClick(index,event){
@@ -21,8 +22,8 @@ export default class Tab extends React.Component {
         function labels(child, index){
             let active = (this.state.selected === index ? styles.active:'')
             return (
-                <a key={index} href='#'
-                    onClick={this.handleClick.bind(this,index)}>                    
+                <a key={index} href='javascript:void(0)'
+                    onClick={e => this.handleClick(index, e)}>                    
                         
                 <li className={active}>
                     {child.props.label}                   

@@ -32,16 +32,15 @@ input{
     color:inherit;
     font:inherit;
     font-size:inherit;
-    font-weight: bold;
+    //font-weight: bold;
     color: black;
     border-radius: 5px;
     border: solid 1px #eaecf0;
     border: solid 1px white;;
     padding: 10px;
     padding-left:0;
-  
-    & :focus{
-        outline: none;
+    &:focus {
+        outline: transparent;
     }    
 }
 

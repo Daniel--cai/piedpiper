@@ -21,10 +21,23 @@ export default class Body extends React.Component {
             <div className={styles.body}>
                 {showModal ? <Modal/> : ''}
                 <Topbar/>
+                <div>
+                    <GraphLink 
+                        id={"d3-arc"} 
+                        foregroundColor={"#4dbec4"}
+                        percentComplete={0.21}/>
+                    <GraphLink 
+                        id={"d3-arc1" } 
+                        foregroundColor={"#16a9fa"}
+                        percentComplete={0.67}/>
+                    <GraphLink 
+                        id={"d3-arc2"} 
+                        foregroundColor={"#b270b4"}
+                        percentComplete={0.87}/>
+                </div>
                 <Fileviewer/>
-                    
                 <FilecontentLink/>
-                <GraphLink/>
+
            
             </div>
 

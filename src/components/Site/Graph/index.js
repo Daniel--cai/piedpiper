@@ -32,7 +32,8 @@ export default class Graph extends React.Component {
   }
 
   redrawArc(){
-    const context = d3.select(`#${this.props.id}`)
+    var { id } = this.props;
+    const context = d3.select(`#${id}`)
     context.remove();
     this.drawArc();
   }
@@ -64,23 +65,24 @@ export default class Graph extends React.Component {
 
   arc() {
     return d3.arc()
-      .innerRadius(70)
-      .outerRadius(80)
+      .innerRadius(60)
+      .outerRadius(70)
       .cornerRadius(5)
       .startAngle(0);
   }
 
   setContext() {
+    var { id } = this.props
     return d3.select(this.refs.arc).append('svg')
-      .attr('height', '300px')
-      .attr('width', '300px')
-      .attr('id', 'd3-arc')
+      .attr('height', '140px')
+      .attr('width', '140px')
+      .attr('id', id)
       .append('g')
-      .attr('transform', `translate(150, 150)`)
+      .attr('transform', `translate(70, 70)`)
   }
   render() {
     return (
-      <div ref="arc"></div>
+      <span ref="arc" className={styles.arc}></span>
     )
   }
 }
