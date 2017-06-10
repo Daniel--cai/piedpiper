@@ -6,6 +6,8 @@ import Body from 'site/Body'
 import Tab from 'site/Tab'
 import Pane from 'site/Pane'
 import axios from 'axios'
+import GraphLink from 'containers/GraphLink'
+import Fileviewer from 'site/Fileviewer'
 var FontAwesome = require('react-fontawesome');
 
 export default class FileContent extends React.Component {
@@ -56,10 +58,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
                 <td><input type="text" placeholder="1863/10000001"></input>
                 </td>
                 <td>No</td>
-                <td>KAMIL TONI JANJ</td>
+                <td>PATRICK THE STAR</td>
                 <td>15 DERP ST APPLETOWN NSW 2000</td>
-                <td>ST GEORGE</td>
-                <td>CUMBERLAND</td>
+                <td>BIKINI BOTTOM</td>
+                <td>PACIFIC</td>
                 <td>$10.00</td>
             </tr>)
     }
@@ -81,7 +83,20 @@ const mapDispatchToProps = (dispatch, ownProps) => {
             <Tab>
                 <Pane label="Title">                  
                     <div className={styles.form}>
-                        
+                            <div>
+                                <GraphLink 
+                                    id={"d3-arc"} 
+                                    foregroundColor={"#4dbec4"}
+                                    percentComplete={0.21}/>
+                                <GraphLink 
+                                    id={"d3-arc1" } 
+                                    foregroundColor={"#16a9fa"}
+                                    percentComplete={0.67}/>
+                                <GraphLink 
+                                    id={"d3-arc2"} 
+                                    foregroundColor={"#b270b4"}
+                                    percentComplete={0.87}/>
+                            </div>
                             <table >
                                 <tbody>
                                 <tr>
@@ -110,7 +125,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
                     </div>
                 </Pane>
                 <Pane label="Street Address">
-                    <div>This is my tab 2 contents!</div>
+                     <Fileviewer/>
                 </Pane>
                 <Pane label="Owner Name">
                     <div>This is my tab 3 contents!</div>
