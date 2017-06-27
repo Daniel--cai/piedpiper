@@ -1,0 +1,38 @@
+.gridview {
+    margin: 30px;
+    display: flex;
+    font-size: 13px;
+
+    table {
+        border-collapse: collapse;
+        flex:1
+    }
+
+    tr{
+        border: solid 1px #e9f0f4;
+    }
+    td:first-child {
+        width: 150px;
+        font-weight: bold;
+    }
+    td:nth-child(2){
+        width: 100%;
+    }
+    td, th{
+        padding: 20px 30px;
+        text-align: left;
+    }
+    th {
+        background-color: #75839a;
+        color: white;
+    }
+
+    td {
+        background-color: white;
+        color: #8290aa
+
+    }
+    
+
+}
+

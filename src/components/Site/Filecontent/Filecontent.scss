@@ -1,6 +1,5 @@
 
 .form{
-
   text-transform: uppercase;
   td{
    border-collapse: collapse;
@@ -9,7 +8,6 @@
   table{
     border-collapse: collapse;
     table-layout: fixed;
-
   }
 
   th{
@@ -54,4 +52,10 @@
 .add{
   padding: 10px 00px;
   color: #eaecf0;
+}
+
+.tabbed {
+  //box-sizing: border-box;
+  padding: 30px;
+  background-color: white;
 }

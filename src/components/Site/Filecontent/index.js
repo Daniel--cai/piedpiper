@@ -79,7 +79,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 
         var { addRow, titleList} = this.props;
         return (
-            <div className="Tabbed">
+            <div className={styles.tabbed}>
             <Tab>
                 <Pane label="Title">                  
                     <div className={styles.form}>

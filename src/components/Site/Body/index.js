@@ -6,6 +6,7 @@ import Fileviewer from 'site/Fileviewer'
 import Modal from 'site/Modal'
 import Topbar from 'site/Topbar'
 import GraphLink from 'containers/GraphLink'
+import GridView from 'site/Gridview'
 export default class Body extends React.Component {
 
     constructor(props){
@@ -21,10 +22,8 @@ export default class Body extends React.Component {
             <div className={styles.body}>
                 {showModal ? <Modal/> : ''}
                 <Topbar/>
-
-               
                 <FilecontentLink/>
-
+                <GridView/>
            
             </div>
 
