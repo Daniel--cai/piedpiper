@@ -5,7 +5,7 @@ export default class Gridview extends React.Component {
   render() {
     return (
       <div className={styles.gridview}>
-      <table >
+      <table>
       <tr>
       <th colSpan="2">Description</th>
       </tr>
