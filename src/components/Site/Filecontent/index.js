@@ -130,16 +130,16 @@ const mapDispatchToProps = (dispatch, ownProps) => {
                 <Pane label="Owner Name">
                     <div>This is my tab 3 contents!</div>
                 </Pane>
-                <Pane label="Sub Folio">
+                <Pane label="Mansion">
                     <div>This is my tab 1 contents!</div>
                 </Pane>
-                <Pane label="Historical">
+                <Pane label="Tab34sdffsdf">
                     <div>This is my tab 2 contents!</div>
                 </Pane>
-                <Pane label="CT Enquiry">
+                <Pane label="sdfsdgsdg">
                     <div>This is my tab 3 contents!</div>
                 </Pane>                
-                <Pane label="Lots Created">
+                <Pane label="L423423">
                     <div>This is my tab 1 contents!</div>
                 </Pane>  
             </Tab>

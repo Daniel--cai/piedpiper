@@ -5,7 +5,7 @@ var FontAwesome = require('react-fontawesome');
 
 export default class Graph extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props)
     this.tau = Math.PI * 2;
   }
@@ -13,49 +13,49 @@ export default class Graph extends React.Component {
     this.drawArc()
   }
 
-  componentDidUpdate(){
+  componentDidUpdate() {
     this.redrawArc();
   }
 
-  setBackground(context){
+  setBackground(context) {
     return context.append('path')
-      .datum({ endAngle: this.tau})
+      .datum({ endAngle: this.tau })
       .style('fill', '#dce6ec')
       .attr('d', this.arc());
   }
 
-  drawArc(){
+  drawArc() {
     const context = this.setContext();
     this.setBackground(context);
     this.setForeground(context);
     this.updatePercent(context);
   }
 
-  redrawArc(){
+  redrawArc() {
     var { id } = this.props;
     const context = d3.select(`#${id}`)
     context.remove();
     this.drawArc();
   }
 
-  setForeground(context){
+  setForeground(context) {
     var { foregroundColor } = this.props
     return context.append('path')
-        .datum({endAngle: 0})
-        .style('fill', foregroundColor)
-        .attr('d', this.arc())
+      .datum({ endAngle: 0 })
+      .style('fill', foregroundColor)
+      .attr('d', this.arc())
   }
 
-  updatePercent(context){
+  updatePercent(context) {
     return this.setForeground(context).transition()
       .duration(this.props.duration)
       .call(this.arcTween, this.tau * this.props.percentComplete, this.arc())
   }
 
-  arcTween(transition, newAngle, arc){
-    transition.attrTween('d', d =>{
+  arcTween(transition, newAngle, arc) {
+    transition.attrTween('d', d => {
       const interpolate = d3.interpolate(d.endAngle, newAngle);
-      const newArc =d ;
+      const newArc = d;
       return t => {
         newArc.endAngle = interpolate(t);
         return arc(newArc);
@@ -79,10 +79,27 @@ export default class Graph extends React.Component {
       .attr('id', id)
       .append('g')
       .attr('transform', `translate(70, 70)`)
+
+    // var $container = $('.chart-container'),
+    //   τ = 2 * Math.PI,
+    //   width = $container.width(),
+    //   height = $container.height(),
+    //   outerRadius = Math.min(width, height) / 2,
+    //   innerRadius = (outerRadius / 5) * 4,
+    //   fontSize = (Math.min(width, height) / 4);
+
+    // return d3.select(this.refs.arc).append('svg')
+    //   .attr("width", '100%')
+    //   .attr("height", '100%')
+    //   .attr('viewBox', '0 0 ' + Math.min(width, height) + ' ' + Math.min(width, height))
+    //   .attr('preserveAspectRatio', 'xMinYMin')
+    //   .attr('id', id)
+    //   .append('g')
+    //   .attr('transform', "translate(" + Math.min(width, height) / 2 + "," + Math.min(width, height) / 2 + ")")
   }
   render() {
-    return (
-      <span ref="arc" className={styles.arc}></span>
+    return (  
+        <span ref="arc" className={styles.arc}></span>
     )
   }
 }
